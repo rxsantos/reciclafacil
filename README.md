@@ -1,4 +1,4 @@
-# greencycle
-Dispositivos Móveis - ATP DDM - APP Reciclagem - Green Cycle
+# Reciclafacil
+APP Reciclagem - Recicla Facil
 
 Projeto em desenvolvimento
