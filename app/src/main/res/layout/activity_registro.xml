@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Registro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGISTRE-SE"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#80B542" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/fullnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite seu nome completo"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite seu email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/passwdEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite sua senha"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="93dp"
+                android:layout_height="80dp"
+                app:srcCompat="@drawable/caminhao_coleta" />
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pessoa_reciclando" />
+
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="60dp"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/coleta"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <Space
+                android:layout_width="180dp"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/descarte"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="60dp"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="Empresa"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="140dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:text="Usuário"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+        </TableRow>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/registrarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6ABD21"
+            android:onClick="cadastroButtonOnClick"
+            android:text="Cadastrar" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

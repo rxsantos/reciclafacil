@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".view.FormCliente">
+
+    <Button
+        android:id="@+id/buttonSalvaCl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#6ABD21"
+        android:onClick="formClienteButtonOnClick"
+        android:text="@string/bt_form_cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollViewClient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewCl01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/dados_usuario"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/textViewCl02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/informacoes_cliente"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="12sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/editTextNameCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/nome_cliente"
+                    android:minHeight="48dp"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:id="@+id/editTextEmailCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:minHeight="48dp"
+                    android:textSize="16sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextCpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/cpf"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextPhoneCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/telefone_whatsapp_cliente"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:minHeight="48dp"
+                    android:phoneNumber="true"
+                    tools:ignore="Deprecated,TextContrastCheck,VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextUfCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/estado_empresa"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextCityCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/cidade_empresa"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextAddressCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/endereco_cliente"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextPostalCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/cep_empresa"
+                    android:importantForAutofill="no"
+                    android:inputType="textPostalAddress"
+                    android:minHeight="48dp"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <EditText
+                    android:id="@+id/editTextCountryCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/pais_empresa"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    tools:ignore="VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lembre-se, quanto mais informações você puder fornecer, melhor será para as empresas de reciclagem realizarem sua solicitação de coleta."
+                    android:textAlignment="center" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCvidro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/vidro"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCplastico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/plastico"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCmetal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/metal"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCpapel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/papel"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCoutros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/outros"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/editTextResiduoCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="@string/residuo_cliente"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:minHeight="48dp"
+                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

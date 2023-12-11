@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FormColetas">
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#6ABD21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/retirar_coleta_empresa"
+        android:textAlignment="center"
+        android:textColor="#6ABD21"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/caminhao_coleta" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/informe_material_coleta_empresa"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:ignore="VisualLintLongText" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#6ABD21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/etPedidoColeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/descr_material_a_coletar"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="normal|bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewColetas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnListarSolicitacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <Button
+        android:id="@+id/btnListarSolicitacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#6ABD21"
+        android:onClick="agendaRetirada"
+        android:text="@string/agendar_retirada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewColetas"
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/btnDatePiker"
+        app:layout_constraintTop_toBottomOf="@+id/etPedidoColeta"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/txtTime"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/btnTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/etPedidoColeta"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnDatePiker"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#6ABD21"
+        android:text="Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPedidoColeta" />
+
+    <Button
+        android:id="@+id/btnTimePicker"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#6ABD21"
+        android:text="Hora"
+        app:layout_constraintStart_toEndOf="@+id/txtDate"
+        app:layout_constraintTop_toBottomOf="@+id/etPedidoColeta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
