@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Greencycle"
+rootProject.name = "Reciclafacil"
 include(":app")
